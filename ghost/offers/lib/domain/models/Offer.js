@@ -270,14 +270,14 @@ class Offer {
 
         const redemptionCount = data.redemptionCount || 0;
 
-        if (cadence.value === 'year' && duration.value.type === 'repeating') {
+        if (isNew && cadence.value === 'year' && duration.value.type === 'repeating') {
             throw new errors.InvalidOfferDuration({
                 message: 'Offer `duration` must be "once" or "forever" for the "yearly" cadence.'
             });
         }
 
         //CASE: For offer type trial, the duration can only be `trial`
-        if (type.value === 'trial' && duration.value.type !== 'trial') {
+        if (isNew && type.value === 'trial' && duration.value.type !== 'trial') {
             throw new errors.InvalidOfferDuration({
                 message: 'Offer `duration` must be "trial" for offer type "trial".'
             });
