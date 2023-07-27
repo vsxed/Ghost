@@ -3066,10 +3066,10 @@
   resolved "https://registry.yarnpkg.com/@handlebars/parser/-/parser-2.0.0.tgz#5e8b7298f31ff8f7b260e6b7363c7e9ceed7d9c5"
   integrity sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==
 
-"@headlessui/react@1.7.15":
-  version "1.7.15"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.15.tgz#53ef6ae132af81b8f188414767b6e79ebf8dc73f"
-  integrity sha512-OTO0XtoRQ6JPB1cKNFYBZv2Q0JMqMGNhYP1CjPvcJvjz8YGokz8oAj89HIYZGN0gZzn/4kk9iUpmMF4Q21Gsqw==
+"@headlessui/react@1.7.16":
+  version "1.7.16"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.16.tgz#9c458c9c4dbb708258c9e8da3fe5363f915f7b11"
+  integrity sha512-2MphIAZdSUacZBT6EXk8AJkj+EuvaaJbtCyHTJrPsz8inhzCl7qeNPI1uk1AUvCgWylVtdN8cVVmnhUDPxPy3g==
   dependencies:
     client-only "^0.0.1"
 
@@ -6966,12 +6966,7 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
-"@types/json-schema@*", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
-  version "7.0.11"
-  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
-  integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
-
-"@types/json-schema@^7.0.12":
+"@types/json-schema@*", "@types/json-schema@^7.0.12", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.12.tgz#d70faba7039d5fca54c83c7dbab41051d2b6f6cb"
   integrity sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
@@ -18313,14 +18308,7 @@ is-color-stop@^1.0.0:
     rgb-regex "^1.0.1"
     rgba-regex "^1.0.0"
 
-is-core-module@^2.12.0, is-core-module@^2.5.0, is-core-module@^2.9.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.12.0.tgz#36ad62f6f73c8253fd6472517a12483cf03e7ec4"
-  integrity sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==
-  dependencies:
-    has "^1.0.3"
-
-is-core-module@^2.12.1:
+is-core-module@^2.12.0, is-core-module@^2.12.1, is-core-module@^2.5.0, is-core-module@^2.9.0:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.12.1.tgz#0c0b6885b6f80011c71541ce15c8d66cf5a4f9fd"
   integrity sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==
