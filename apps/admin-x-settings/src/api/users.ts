@@ -10,7 +10,7 @@ export type User = {
     email: string;
     profile_image: string;
     cover_image: string|null;
-    bio: string;
+    bio: string|null;
     website: string;
     location: string;
     facebook: string;
@@ -78,6 +78,7 @@ export const useBrowseUsers = createQuery<UsersResponseType>({
 export const useCurrentUser = createQuery<User>({
     dataType,
     path: '/users/me/',
+    defaultSearchParams: {include: 'roles'},
     returnData: originalData => (originalData as UsersResponseType).users?.[0]
 });
 
@@ -139,4 +140,8 @@ export function isOwnerUser(user: User) {
 
 export function isAdminUser(user: User) {
     return user.roles.some(role => role.name === 'Administrator');
+}
+
+export function isEditorUser(user: User) {
+    return user.roles.some(role => role.name === 'Editor');
 }

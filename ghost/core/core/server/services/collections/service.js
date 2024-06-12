@@ -2,7 +2,6 @@ const {
     CollectionsService
 } = require('@tryghost/collections');
 const BookshelfCollectionsRepository = require('./BookshelfCollectionsRepository');
-const labs = require('../../../shared/labs');
 
 let inited = false;
 class CollectionsServiceWrapper {
@@ -13,7 +12,7 @@ class CollectionsServiceWrapper {
         const DomainEvents = require('@tryghost/domain-events');
         const postsRepository = require('./PostsRepository').getInstance();
         const models = require('../../models');
-        const collectionsRepositoryInMemory = new BookshelfCollectionsRepository(models.Collection);
+        const collectionsRepositoryInMemory = new BookshelfCollectionsRepository(models.Collection, models.CollectionPost);
 
         const collectionsService = new CollectionsService({
             collectionsRepository: collectionsRepositoryInMemory,
@@ -32,15 +31,18 @@ class CollectionsServiceWrapper {
     }
 
     async init() {
-        if (!labs.isSet('collections')) {
-            return;
+        const config = require('../../../shared/config');
+        const labs = require('../../../shared/labs');
+
+        // host setting OR labs "collections" flag has to be enabled to run collections service
+        if (config.get('hostSettings:collections:enabled') || labs.isSet('collections')) {
+            if (inited) {
+                return;
+            }
+
+            inited = true;
+            this.api.subscribeToEvents();
         }
-        if (inited) {
-            return;
-        }
-        inited = true;
-        this.api.subscribeToEvents();
-        require('./intercept-events')();
     }
 }
 
